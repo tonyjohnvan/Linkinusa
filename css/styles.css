@@ -1048,6 +1048,23 @@ footer .copyright {
         background-position: 0 0;
     }
 }
+@-webkit-keyframes animatedBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 100%;
+    }
+}
+
+@-webkit-keyframes animatedBackgroundReturn {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
 
 #features .screenShotInner {
     width: 86%;
