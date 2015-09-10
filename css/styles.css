@@ -8,12 +8,18 @@ Tony John Van Studio
 =========================================
 -----------------------------------------*/
 
+@font-face {
+    font-family: STHeiTi;
+    src: url(../fonts/STHeitiMedium.ttc);
+}
+
 html {
     font-size: 100%;
 }
 
 body {
     background: #232323;
+    font-family: STHeiTi;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -538,6 +544,10 @@ header .intro-section .buttons {
     max-width: 250px;
     margin: auto;
     margin-bottom: 80px;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
 }
 
 .features .phone-image img {
@@ -1049,6 +1059,10 @@ footer .copyright {
     -webkit-animation: animatedBackgroundReturn 2s ease-in-out 0s ;
     background-size: 100% auto;
     background-repeat: no-repeat;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
 }
 
 #features .screenShotInner:hover {
