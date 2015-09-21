@@ -664,19 +664,21 @@ object {
 }
 
 .testimonials .feedback .message {
-    font-size: 18px;
+    font-size: 15px;
     font-style: italic;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .testimonials .feedback .name {
     margin-top: 15px;
     font-weight: 400;
+    font-size: 18px;
 }
 
 .testimonials .feedback .company-info {
-    font-size: 12px;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .testimonials .owl-theme .owl-controls .owl-page span {
