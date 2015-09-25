@@ -1,13 +1,20 @@
 /* =================================
-   LOADER                     
+   LOADER
 =================================== */
 // makes sure the whole site is loaded
 jQuery(window).load(function() {
         // will first fade out the loading animation
-	jQuery(".status").fadeOut();
+//	jQuery("#loader").fadeOut();
         // will fade out the whole DIV that covers the website.
-	jQuery(".preloader").delay(1000).fadeOut("slow");
+//	jQuery("#loader-wrapper").delay(1000).fadeOut("slow");
+    $('body').addClass('loaded');
 })
+// or force it to show after 4 seconds
+$(function(){
+    setTimeout(function(){
+        $('body').addClass('loaded');
+    },4000);
+});
 
 /* =================================
 ===  RESPONSIVE VIDEO           ====
@@ -29,10 +36,10 @@ function mailchimpCallback(resp) {
      if (resp.result === 'success') {
         $('.subscription-success').html('<i class="icon_check_alt2"></i><br/>' + resp.msg).fadeIn(1000);
         $('.subscription-error').fadeOut(500);
-        
+
     } else if(resp.result === 'error') {
         $('.subscription-error').html('<i class="icon_close_alt2"></i><br/>' + resp.msg).fadeIn(1000);
-    }  
+    }
 }
 
 
@@ -46,7 +53,7 @@ $(document).ready(function() {
     filter: ':not(.external)',
     changeHash: true
   });
-  
+
 });
 
 
@@ -102,7 +109,7 @@ jQuery(function( $ ){
 ===  VIDEO BACKGROUND           ====
 =================================== */
 if (matchMedia('(min-width: 640px)').matches) {
-   
+
    $(document).ready(function() {
     var videobackground = new $.backgroundVideo($('body'), {
       "align": "centerXY",
@@ -122,8 +129,8 @@ if (matchMedia('(min-width: 640px)').matches) {
 =================================== */
 function alturaMaxima() {
   var altura = $(window).height();
-  $(".full-screen").css('min-height',altura); 
-  
+  $(".full-screen").css('min-height',altura);
+
 }
 
 $(document).ready(function() {
@@ -137,8 +144,8 @@ $(document).ready(function() {
 =================================== */
 function alturaMaxima() {
   var altura = $(window).height();
-  $(".full-screen").css('min-height',altura); 
-  
+  $(".full-screen").css('min-height',altura);
+
 }
 
 $(document).ready(function() {
@@ -295,8 +302,8 @@ $('.expand-form').simpleexpand({
 /* =================================
 ===  STELLAR                    ====
 =================================== */
-$(window).stellar({ 
-horizontalScrolling: false 
+$(window).stellar({
+horizontalScrolling: false
 });
 
 
